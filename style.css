@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ECF2F8;
+}
+
+.container-grid {
+    margin: auto;
+    padding: 10px;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+    
+}
+/* All testimonial divs */
+.testimonial {
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+
+/* Daniel div */
+#test1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    background-color: #7541C8;
+    color: #fff;
+    position: relative;
+}
+#test1 .picture {
+    border: 2px #ffffff59 solid;
+}
+
+
+
+/* The quote picture */
+.quote {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    z-index: 0;
+    height: 110px;
+    width: 120px;
+}
+/* The image inside the div */
+.quotes {
+    height: 110px;
+    width: 120px;
+}
+
+/* The name div */
+#test1 .name {
+    z-index: 2;
+    opacity: 0.99999999;
+}
+
+/* The h1 inside text div */
+#theHeader {
+    opacity: 0.99999;
+}
+
+/* Jonathan div */
+#test2 {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: #48556A;
+    color: #fff;
+}
+#test2 .picture {
+    border: 2px #48556A solid;
+}
+/* Kira div */
+#test3 {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    background-color: #fff;
+    box-shadow: 15px 25px 25px 0px #88888833;
+}
+#test3 .picture{
+    border: 2px #ffffff solid;
+}
+/* Jeanette div */
+#test4 {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #fff;
+    box-shadow: 15px 25px 25px 0px #88888833;
+}
+#test4 .picture {
+    border: 2px #ffffff solid;
+}
+/* Patrick div */
+#test5 {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    background-color: #19212E;
+    color: #fff;
+}
+#test5 .picture {
+    border: 2px #7541c8 solid;
+}
+
+/* Div containing picture and name */
+.pic-name {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+/* Round div with picture */
+.picture {
+    border-radius: 50%;
+    overflow: hidden;
+    /* border: 2px gray solid; */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The image inside the testimonial */
+.picture img {
+    width: 40px;
+    height: 40px;
+}
+
+/* The header of the text */
+h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* The name next to the picure */
+.name {
+    margin-left: 15px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.name h3 {
+    padding: 0;
+    font-weight: 500;
+}
+
+.name p {
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.text p {
+    opacity: 0.7;
+}
+
+
+@media (max-width: 1100px) {
+    .container-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #test3 {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+}
+
+@media (max-width: 660px) {
+    .container-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    #test1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .quote {
+        right: 7%;
+        width: auto;
+        height: auto;
+    }
+
+    .quote .quotes {
+        width: 110px;
+        height: 110px;
+    }
+    #test2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #test3 {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    #test4 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #test5 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .name {
+        transform: scale(0.8);
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 280px) {
+    .container-grid {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
